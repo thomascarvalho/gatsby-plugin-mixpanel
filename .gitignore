@@ -1,3 +1,4 @@
 /gatsby-browser.js
 .nvmrc
 .idea
+node_modules
