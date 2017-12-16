@@ -1,3 +1,6 @@
+[![npm package](https://img.shields.io/npm/v/gatsby-plugin-mixpanel.svg?style=flat-square)](https://www.npmjs.org/package/gatsby-plugin-mixpanel)
+
+
 # gatsby-plugin-mixpanel
 
 Add [mixpanel](https://www.mixpanel.com) on your gatsby website.
