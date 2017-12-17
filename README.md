@@ -16,14 +16,14 @@ or
 
 ## How to use
 
-Deplare the plugin in your gatsby-config.js and set mixpanel api token
+Declare the plugin in your gatsby-config.js and set mixpanel api token
 
 ```javascript
 plugins: [
   {
-    resolve: `gatsby-plugin-mixpanel`,
+    resolve: 'gatsby-plugin-mixpanel',
     options: {
-      apiToken: "YOUR_MIXPANEL_API_TOKEN",
+      apiToken: 'YOUR_MIXPANEL_API_TOKEN',
     },
   },
 ];
