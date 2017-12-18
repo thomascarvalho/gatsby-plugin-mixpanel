@@ -1,22 +1,17 @@
 [![npm package](https://img.shields.io/npm/v/gatsby-plugin-mixpanel.svg?style=flat-square)](https://www.npmjs.org/package/gatsby-plugin-mixpanel)
 
-
 # gatsby-plugin-mixpanel
 
-Add [mixpanel](https://www.mixpanel.com) on your gatsby website.
-This plugin makes it easy to integrate [react-mixpanel](https://github.com/neciu/react-mixpanel) on your [gatsby](https://github.com/gatsbyjs/gatsby) website
+This plugin is to facilitate [mixpanel](https://www.mixpanel.com) (integration with [react-mixpanel](https://github.com/neciu/react-mixpanel)) on your [gatsby](https://github.com/gatsbyjs/gatsby) projet
 
 ## Install
 
-`npm install --save gatsby-plugin-mixpanel`
+`npm install --save gatsby-plugin-mixpanel` or `yarn add gatsby-plugin-mixpanel`
 
-or
-
-`yarn add gatsby-plugin-mixpanel`
 
 ## How to use
 
-Declare the plugin in your gatsby-config.js and set mixpanel api token
+Add the plugin in your gatsby-config.js and set your mixpanel api token
 
 ```javascript
 plugins: [
@@ -49,3 +44,9 @@ HelloWorld.contextTypes = { // mixpanel must be declared on contextTypes
 };
 ```
 
+## Todo lists / Ideas
+
+- [ ] add option to track routing changes ?
+- [ ] add option to enable mixpanel only on production ?
+
+Enjoy this little plugin and feel free to contribute :smiley:
