@@ -2,7 +2,7 @@
 
 # gatsby-plugin-mixpanel
 
-This plugin is to facilitate [mixpanel](https://www.mixpanel.com) (integration with [react-mixpanel](https://github.com/neciu/react-mixpanel)) on your [gatsby](https://github.com/gatsbyjs/gatsby) projet
+Plugin to integrate [mixpanel](https://www.mixpanel.com) (with [react-mixpanel](https://github.com/neciu/react-mixpanel)) on your [gatsby](https://github.com/gatsbyjs/gatsby) project
 
 ## Install
 
