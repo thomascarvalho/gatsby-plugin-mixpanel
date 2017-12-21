@@ -1,4 +1,5 @@
 /gatsby-browser.js
+/gatsby-node.js
 .nvmrc
 .idea
 node_modules
