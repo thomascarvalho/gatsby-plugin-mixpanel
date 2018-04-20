@@ -2,7 +2,7 @@
 
 # gatsby-plugin-mixpanel
 
-Plugin to integrate [mixpanel](https://www.mixpanel.com) (with [react-mixpanel](https://github.com/neciu/react-mixpanel)) on your [gatsby](https://github.com/gatsbyjs/gatsby) project
+Integrate [mixpanel](https://www.mixpanel.com) (with [react-mixpanel](https://github.com/neciu/react-mixpanel)) on your [gatsby](https://github.com/gatsbyjs/gatsby) project
 
 ## Install
 
@@ -34,7 +34,7 @@ class HelloWorld extends React.Component {
     render() {
         return (
             <h1>Hello !</h1>
-        )
+        );
     }
 }
 
