@@ -22,15 +22,15 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
+    "babel-preset-env": "1.7.0",
     "babel-preset-react": "^6.24.1",
-    "cross-env": "^5.1.4",
+    "cross-env": "^5.1.5",
     "prettier": "^1.12.1"
   },
   "dependencies": {
     "babel-plugin-transform-object-assign": "^6.22.0",
     "babel-runtime": "^6.26.0",
-    "mixpanel-browser": "^2.20.0",
+    "mixpanel-browser": "^2.22.0",
     "react-mixpanel": "^0.0.11"
   },
   "scripts": {
