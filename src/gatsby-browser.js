@@ -35,10 +35,10 @@ exports.onRouteUpdate = ({ location }, pluginOptions) => {
   }
 };
 
-exports.wrapRootComponent = ({ Root }) => () => {
+exports.wrapPageElement = ({ element }) => {
   return (
     <MixpanelProvider mixpanel={mixpanel}>
-      <Root />
+      { element }
     </MixpanelProvider>
   );
 };
