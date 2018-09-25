@@ -35,7 +35,7 @@ exports.onRouteUpdate = ({ location }, pluginOptions) => {
   }
 };
 
-exports.wrapRootElement = ({ element }) => {
+exports.wrapPageElement = ({ element }) => {
   return (
     <MixpanelProvider mixpanel={mixpanel}>
       { element }
