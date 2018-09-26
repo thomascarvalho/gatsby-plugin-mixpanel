@@ -4,13 +4,15 @@
 
 For Gatsby v2
 
-Integrate [mixpanel](https://www.mixpanel.com) (with [react-mixpanel](https://github.com/neciu/react-mixpanel)) on your [gatsby](https://github.com/gatsbyjs/gatsby) project
+Integrate [mixpanel](https://www.mixpanel.com) on your [gatsby](https://github.com/gatsbyjs/gatsby) project
 
 ## Install
 
 `npm install --save gatsby-plugin-mixpanel` or `yarn add gatsby-plugin-mixpanel`
 
 ## How to use
+
+### Declare plugin
 
 Add the plugin in your gatsby-config.js and set your mixpanel api token
 
@@ -25,24 +27,49 @@ plugins: [
 ];
 ```
 
-You can access to mixpanel in the context of your components :
+### Using mixpanel by passing props
+
+You can access to mixpanel library in the props of your component by using the function ```withMixpanel``` available in the plugin
 
 ```javascript
-class HelloWorld extends React.Component {
-    componentDidMount() {
-        this.context.mixpanel.track('Hello'); // send event 'Hello' to mixpanel
-    }
+import { withMixpanel } from 'gatsby-plugin-mixpanel'
 
-    render() {
-        return (
-            <h1>Hello !</h1>
-        );
+class HelloWorld extends Component {
+    componentDidMount() {
+        const { mixpanel } = this.props
+        mixpanel.track('Hello'); // send event 'Hello' to mixpanel
     }
+    render() {/*...*/}
 }
 
-HelloWorld.contextTypes = { // mixpanel must be declared on contextTypes 
-    mixpanel: PropTypes.object.isRequired
-};
+export default withMixpanel()(HelloWorld)
+
+// or with decorators
+@withMixpanel()
+class HelloWorld extends Component {
+    /*...*/
+}
+```
+
+### Using mixpanel with react-hooks
+
+**Your project must have a version of react that supports react-hooks.**
+
+Import the ```useMixpanel``` hook.
+
+```javascript
+import { useMixpanel } from 'gatsby-plugin-mixpanel'
+
+const HelloWorld = () => {
+  const mixpanel = useMixpanel()
+  mixpanel.track('Hello');
+  return (
+    <div>
+      <button onClick={() => mixpanel.track('Hello button') }>Hello</button>
+    </div>
+  )
+}
+
 ```
 
 ### Configuration
@@ -75,7 +102,7 @@ plugins: [
     options: {
       apiToken: 'YOUR_MIXPANEL_API_TOKEN',
       pageViews: {
-        '/blog': 'Page blog view', // an event 'Page blog view' will be send to mixpanel a every vist on the /blog page
+        '/blog': 'Page blog view', // an event 'Page blog view' will be send to mixpanel on every visit on the /blog page
         '/404': 'Page 404 view',
       }
       /*

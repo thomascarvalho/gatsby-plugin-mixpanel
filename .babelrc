@@ -5,6 +5,7 @@
   ],
   "plugins": [
     "@babel/plugin-syntax-object-rest-spread",
-    "@babel/plugin-transform-object-assign"
+    "@babel/plugin-transform-object-assign",
+    ["@babel/plugin-proposal-decorators", { "legacy": true }]
   ]
 }
