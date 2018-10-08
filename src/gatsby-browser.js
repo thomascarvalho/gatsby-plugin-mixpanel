@@ -21,12 +21,9 @@ exports.onRouteUpdate = ({ location }, pluginOptions) => {
   const options = getOptions(pluginOptions);
 
   if (!isEnable(options)) {
-    mixpanel.init('disable', { autotrack: false });
-    mixpanel.disable();
     return;
   }
 
-  mixpanel.init(options.apiToken, { debug: options.debug });
   if (options.pageViews) {
     const mixpanelEvent = options.pageViews[location.pathname];
     if (mixpanelEvent) {
@@ -34,6 +31,18 @@ exports.onRouteUpdate = ({ location }, pluginOptions) => {
     }
   }
 };
+
+exports.onClientEntry = (skip, pluginOptions) => {
+  const options = getOptions(pluginOptions);
+
+  if (!isEnable(options)) {
+    mixpanel.init('disable', { autotrack: false });
+    mixpanel.disable();
+    return;
+  }
+
+  mixpanel.init(options.apiToken, { debug: options.debug });
+}
 
 exports.wrapPageElement = ({ element }) => {
   return (
