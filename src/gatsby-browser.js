@@ -17,6 +17,22 @@ const getOptions = options =>
     options
   );
 
+const trackEvent = (eventName, properties) => {
+  if (eventName) mixpanel.track(eventName, properties);
+}
+
+const trackPageViews = (location, pageViews) => {
+  if (pageViews && location) {
+    let eventName;
+    if (pageViews instanceof Object) {
+      eventName = pageViews[location.pathname];
+    } else if (pageViews === 'all') {
+      eventName = `View page ${location.pathname}`;
+    }
+    trackEvent(eventName, location);
+  }
+}
+
 exports.onRouteUpdate = ({ location }, pluginOptions) => {
   const options = getOptions(pluginOptions);
 
@@ -24,12 +40,7 @@ exports.onRouteUpdate = ({ location }, pluginOptions) => {
     return;
   }
 
-  if (options.pageViews) {
-    const mixpanelEvent = options.pageViews[location.pathname];
-    if (mixpanelEvent) {
-      mixpanel.track(mixpanelEvent, location);
-    }
-  }
+  trackPageViews(location, options.pageViews);
 };
 
 exports.onClientEntry = (skip, pluginOptions) => {

@@ -64,7 +64,8 @@ plugins: [
 ];
 ```
 
-On the object pageViews you can declare url path and events that will be send on mixpanel.
+The pageViews param is null by default, if you want to autotrack some page you can declare an object url path and events that will be send on mixpanel.
+Or if you want to track every route changes set pageViews to 'all'.
 
 example: 
 ```javascript
@@ -77,6 +78,9 @@ plugins: [
         '/blog': 'Page blog view', // an event 'Page blog view' will be send to mixpanel a every vist on the /blog page
         '/404': 'Page 404 view',
       }
+      /*
+      pageViews: 'all' // to track every route changes
+      */
     },
   },
 ];
