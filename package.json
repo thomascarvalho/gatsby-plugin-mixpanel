@@ -21,17 +21,17 @@
   "main": "index.js",
   "devDependencies": {
     "@babel/cli": "^7.1.2",
-    "@babel/core": "^7.1.2",
-    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/core": "^7.3.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.3.4",
     "@babel/plugin-transform-object-assign": "^7.0.0",
-    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
     "cross-env": "^5.2.0",
-    "prettier": "^1.14.3"
+    "prettier": "^1.16.4"
   },
   "dependencies": {
-    "mixpanel-browser": "^2.22.4",
-    "react": "^16.7.0",
+    "mixpanel-browser": "^2.26.0",
+    "react": "^16.8.3",
     "react-mixpanel": "^0.0.11"
   },
   "scripts": {
