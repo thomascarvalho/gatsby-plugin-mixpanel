@@ -58,7 +58,9 @@ plugins: [
       // optional fields, default values
       debug: false, // if true activate debug mode on mixpanel library
       enableOnDevMode: true, // if false mixpanel will be activated on NODE_ENV=production only
-      pageViews: null // see below
+      pageViews: null, // see below
+       // set pageViews to 'all' and use this option to set the same event name for all page view events
+      trackPageViewsAs: 'Event Name to use for all page views'
     },
   },
 ];
