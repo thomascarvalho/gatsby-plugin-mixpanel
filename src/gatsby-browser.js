@@ -26,6 +26,8 @@ const trackPageViews = (location, pageViews) => {
     let eventName;
     if (pageViews instanceof Object) {
       eventName = pageViews[location.pathname];
+    } else if (typeof pageViews === 'function') {
+      eventName = pageViews(location.pathname);
     } else if (pageViews === 'all') {
       eventName = `View page ${location.pathname}`;
     }
