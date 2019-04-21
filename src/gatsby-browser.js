@@ -51,7 +51,7 @@ exports.onClientEntry = (skip, pluginOptions) => {
     return
   }
 
-  mixpanel.init(options.apiToken, { debug: options.debug })
+  mixpanel.init(options.apiToken, { debug: options.debug, track_pageview: false })
 }
 
 exports.wrapRootElement = ({ element }) => (
