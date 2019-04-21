@@ -7,18 +7,18 @@ const isEnable = options =>
   options.apiToken
 
 const trackEvent = (eventName, properties) => {
-  if (eventName) mixpanel.track(eventName, properties);
+  if (eventName) mixpanel.track(eventName, properties)
 }
 
 const trackPageViews = (location, pageViews) => {
   if (pageViews && location) {
-    let eventName;
+    let eventName
     if (pageViews instanceof Object) {
-      eventName = pageViews[location.pathname];
+      eventName = pageViews[location.pathname]
     } else if (pageViews === 'all') {
-      eventName = `View page ${location.pathname}`;
+      eventName = `View page ${location.pathname}`
     }
-    trackEvent(eventName, location);
+    trackEvent(eventName, location)
   }
 }
 
@@ -34,23 +34,12 @@ exports.onRouteUpdate = ({ location }, pluginOptions) => {
 
 const getOptions = pluginOptions => {
   const defaultsOptions = {
-  apiToken: null,
-  enableOnDevMode: true,
-  debug: false,
-}
+    apiToken: null,
+    enableOnDevMode: true,
+    debug: false,
+  }
   const options = { ...defaultsOptions, ...pluginOptions }
   return { ...options, isEnable: isEnable(options) }
-}
-
-exports.onClientEntry = (skip, pluginOptions) => {
-  const options = getOptions(pluginOptions);
-
-  if (!isEnable(options)) {
-    mixpanel.init('disable', {autotrack: false});
-    mixpanel.disable();
-    return;
-  }
-  mixpanel.init(options.apiToken, {debug: options.debug});
 }
 
 exports.onClientEntry = (skip, pluginOptions) => {
@@ -63,7 +52,6 @@ exports.onClientEntry = (skip, pluginOptions) => {
   }
 
   mixpanel.init(options.apiToken, { debug: options.debug })
-  console.log('ini')
 }
 
 exports.wrapRootElement = ({ element }) => (

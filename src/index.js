@@ -6,7 +6,7 @@ import React, {
 } from 'react'
 import mixpanel from 'mixpanel-browser'
 
-const MixpanelContext = createContext()
+const MixpanelContext = createContext(mixpanel)
 
 export const MixpanelProvider = ({ children }) => (
   <MixpanelContext.Provider value={mixpanel}>

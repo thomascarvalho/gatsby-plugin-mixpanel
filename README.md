@@ -44,14 +44,14 @@ class HelloWorld extends Component {
 
 export default withMixpanel()(HelloWorld)
 
-// or with decorators
+// or with decorators if your project supports
 @withMixpanel()
 class HelloWorld extends Component {
     /*...*/
 }
 ```
 
-### Using mixpanel with react-hooks
+### Using mixpanel with react hooks
 
 **Your project must have a version of react that supports react-hooks.**
 

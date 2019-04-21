@@ -1,5 +1,10 @@
 import React, { PureComponent } from 'react'
-import { MixpanelConsumer, MixpanelProvider, withMixpanel } from '../src'
+import {
+  MixpanelConsumer,
+  MixpanelProvider,
+  useMixpanel,
+  withMixpanel,
+} from '../src'
 import { mount } from 'enzyme'
 
 const DumbComponent = () => {
@@ -48,5 +53,24 @@ describe('Mixpanel Consumer', () => {
       wrapper.find('DumbComponentWithDecoratorMixpanel').props('mixpanel')
     ).toBeDefined()
     expect(wrapper).toMatchSnapshot()
+  })
+
+  it('with hook useMixpanel', () => {
+    const TestHook = ({ callback }) => {
+      callback()
+      return null
+    }
+
+    const testHook = callback => {
+      mount(<TestHook callback={callback} />)
+    }
+
+    let mixpanel
+
+    testHook(() => {
+      mixpanel = useMixpanel()
+    })
+
+    expect(mixpanel).toBeDefined()
   })
 })
