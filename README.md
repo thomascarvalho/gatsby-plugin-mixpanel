@@ -83,8 +83,8 @@ plugins: [
     options: {
       apiToken: 'YOUR_MIXPANEL_API_TOKEN', // required
       // optional fields, default values
-      debug: false, // if true activate debug mode on mixpanel library
       enableOnDevMode: true, // if false mixpanel will be activated on NODE_ENV=production only
+      config: null // override specific config for mixpanel initialization https://github.com/mixpanel/mixpanel-js/blob/8b2e1f7b/src/mixpanel-core.js#L87-L110
       pageViews: null // see below
     },
   },

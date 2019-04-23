@@ -23,20 +23,20 @@ const trackPageViews = (location, pageViews) => {
 }
 
 exports.onRouteUpdate = ({ location }, pluginOptions) => {
-  const options = getOptions(pluginOptions);
+  const options = getOptions(pluginOptions)
 
   if (!isEnable(options)) {
-    return;
+    return
   }
 
-  trackPageViews(location, options.pageViews);
-};
+  trackPageViews(location, options.pageViews)
+}
 
 const getOptions = pluginOptions => {
   const defaultsOptions = {
     apiToken: null,
     enableOnDevMode: true,
-    debug: false,
+    config: null,
   }
   const options = { ...defaultsOptions, ...pluginOptions }
   return { ...options, isEnable: isEnable(options) }
@@ -51,7 +51,10 @@ exports.onClientEntry = (skip, pluginOptions) => {
     return
   }
 
-  mixpanel.init(options.apiToken, { debug: options.debug, track_pageview: false })
+  mixpanel.init(
+    options.apiToken,
+    Object.assign({}, { track_pageview: false }, options.config)
+  )
 }
 
 exports.wrapRootElement = ({ element }) => (
