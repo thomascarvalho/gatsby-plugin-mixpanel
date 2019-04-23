@@ -12,14 +12,14 @@ const getOptions = options =>
     {
       apiToken: null,
       enableOnDevMode: true,
-      debug: false,
+      config: null,
     },
     options
   );
 
 const trackEvent = (eventName, properties) => {
   if (eventName) mixpanel.track(eventName, properties);
-}
+};
 
 const trackPageViews = (location, pageViews) => {
   if (pageViews && location) {
@@ -31,7 +31,7 @@ const trackPageViews = (location, pageViews) => {
     }
     trackEvent(eventName, location);
   }
-}
+};
 
 exports.onRouteUpdate = ({ location }, pluginOptions) => {
   const options = getOptions(pluginOptions);
@@ -52,13 +52,12 @@ exports.onClientEntry = (skip, pluginOptions) => {
     return;
   }
 
-  mixpanel.init(options.apiToken, { debug: options.debug, track_pageview: false });
-}
+  mixpanel.init(
+    options.apiToken,
+    Object.assign({}, { track_pageview: false }, options.config)
+  );
+};
 
 exports.wrapPageElement = ({ element }) => {
-  return (
-    <MixpanelProvider mixpanel={mixpanel}>
-      { element }
-    </MixpanelProvider>
-  );
+  return <MixpanelProvider mixpanel={mixpanel}>{element}</MixpanelProvider>;
 };

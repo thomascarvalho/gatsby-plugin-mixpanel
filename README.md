@@ -77,7 +77,8 @@ plugins: [
       pageViews: {
         '/blog': 'Page blog view', // an event 'Page blog view' will be send to mixpanel a every vist on the /blog page
         '/404': 'Page 404 view',
-      }
+      },
+      config: null, // you can override default config for mixpanel library https://github.com/mixpanel/mixpanel-js/blob/8b2e1f7b/src/mixpanel-core.js#L87-L110
       /*
       pageViews: 'all' // to track every route changes
       */
