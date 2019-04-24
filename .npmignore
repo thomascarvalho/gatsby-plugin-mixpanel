@@ -36,3 +36,5 @@ examples
 .idea
 .nvmrc
 .babelrc
+__tests__
+setupTests.js

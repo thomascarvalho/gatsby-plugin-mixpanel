@@ -1,0 +1,275 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Mixpanel Consumer Consumer component 1`] = `
+<MixpanelProvider>
+  <MixpanelConsumer>
+    <DumbComponent
+      mixpanel={
+        MixpanelLib {
+          "_": Object {
+            "HTTPBuildQuery": [Function],
+            "JSONDecode": [Function],
+            "JSONEncode": [Function],
+            "UUID": [Function],
+            "base64Encode": [Function],
+            "bind": [Function],
+            "bind_instance_methods": [Function],
+            "cookie": Object {
+              "get": [Function],
+              "parse": [Function],
+              "remove": [Function],
+              "set": [Function],
+              "set_seconds": [Function],
+            },
+            "dom_query": [Function],
+            "each": [Function],
+            "encodeDates": [Function],
+            "escapeHTML": [Function],
+            "extend": [Function],
+            "formatDate": [Function],
+            "getHashParam": [Function],
+            "getQueryParam": [Function],
+            "identity": [Function],
+            "include": [Function],
+            "includes": [Function],
+            "info": Object {
+              "browser": [Function],
+              "browserVersion": [Function],
+              "campaignParams": [Function],
+              "device": [Function],
+              "os": [Function],
+              "pageviewInfo": [Function],
+              "people_properties": [Function],
+              "properties": [Function],
+              "referringDomain": [Function],
+              "searchEngine": [Function],
+              "searchInfo": [Function],
+            },
+            "inherit": [Function],
+            "isArguments": [Function],
+            "isArray": [Function],
+            "isBlockedUA": [Function],
+            "isDate": [Function],
+            "isElement": [Function],
+            "isEmptyObject": [Function],
+            "isFunction": [Function],
+            "isNumber": [Function],
+            "isObject": [Function],
+            "isString": [Function],
+            "isUndefined": [Function],
+            "keys": [Function],
+            "localStorage": Object {
+              "error": [Function],
+              "get": [Function],
+              "is_supported": [Function],
+              "parse": [Function],
+              "remove": [Function],
+              "set": [Function],
+            },
+            "register_event": [Function],
+            "safewrap": [Function],
+            "safewrap_class": [Function],
+            "safewrap_instance_methods": [Function],
+            "strip_empty_properties": [Function],
+            "timestamp": [Function],
+            "toArray": [Function],
+            "trim": [Function],
+            "truncate": [Function],
+            "utf8Encode": [Function],
+            "values": [Function],
+          },
+          "init": [Function],
+        }
+      }
+    >
+      <h1>
+        Dumb
+      </h1>
+    </DumbComponent>
+  </MixpanelConsumer>
+</MixpanelProvider>
+`;
+
+exports[`Mixpanel Consumer withMixpanel decorator function 1`] = `
+<MixpanelProvider>
+  <_class>
+    <MixpanelConsumer>
+      <DumbComponentWithDecoratorMixpanel
+        mixpanel={
+          MixpanelLib {
+            "_": Object {
+              "HTTPBuildQuery": [Function],
+              "JSONDecode": [Function],
+              "JSONEncode": [Function],
+              "UUID": [Function],
+              "base64Encode": [Function],
+              "bind": [Function],
+              "bind_instance_methods": [Function],
+              "cookie": Object {
+                "get": [Function],
+                "parse": [Function],
+                "remove": [Function],
+                "set": [Function],
+                "set_seconds": [Function],
+              },
+              "dom_query": [Function],
+              "each": [Function],
+              "encodeDates": [Function],
+              "escapeHTML": [Function],
+              "extend": [Function],
+              "formatDate": [Function],
+              "getHashParam": [Function],
+              "getQueryParam": [Function],
+              "identity": [Function],
+              "include": [Function],
+              "includes": [Function],
+              "info": Object {
+                "browser": [Function],
+                "browserVersion": [Function],
+                "campaignParams": [Function],
+                "device": [Function],
+                "os": [Function],
+                "pageviewInfo": [Function],
+                "people_properties": [Function],
+                "properties": [Function],
+                "referringDomain": [Function],
+                "searchEngine": [Function],
+                "searchInfo": [Function],
+              },
+              "inherit": [Function],
+              "isArguments": [Function],
+              "isArray": [Function],
+              "isBlockedUA": [Function],
+              "isDate": [Function],
+              "isElement": [Function],
+              "isEmptyObject": [Function],
+              "isFunction": [Function],
+              "isNumber": [Function],
+              "isObject": [Function],
+              "isString": [Function],
+              "isUndefined": [Function],
+              "keys": [Function],
+              "localStorage": Object {
+                "error": [Function],
+                "get": [Function],
+                "is_supported": [Function],
+                "parse": [Function],
+                "remove": [Function],
+                "set": [Function],
+              },
+              "register_event": [Function],
+              "safewrap": [Function],
+              "safewrap_class": [Function],
+              "safewrap_instance_methods": [Function],
+              "strip_empty_properties": [Function],
+              "timestamp": [Function],
+              "toArray": [Function],
+              "trim": [Function],
+              "truncate": [Function],
+              "utf8Encode": [Function],
+              "values": [Function],
+            },
+            "init": [Function],
+          }
+        }
+      >
+        <h1>
+          Dumb
+        </h1>
+      </DumbComponentWithDecoratorMixpanel>
+    </MixpanelConsumer>
+  </_class>
+</MixpanelProvider>
+`;
+
+exports[`Mixpanel Consumer withMixpanel wrapped function 1`] = `
+<MixpanelProvider>
+  <_class>
+    <MixpanelConsumer>
+      <DumbComponent
+        mixpanel={
+          MixpanelLib {
+            "_": Object {
+              "HTTPBuildQuery": [Function],
+              "JSONDecode": [Function],
+              "JSONEncode": [Function],
+              "UUID": [Function],
+              "base64Encode": [Function],
+              "bind": [Function],
+              "bind_instance_methods": [Function],
+              "cookie": Object {
+                "get": [Function],
+                "parse": [Function],
+                "remove": [Function],
+                "set": [Function],
+                "set_seconds": [Function],
+              },
+              "dom_query": [Function],
+              "each": [Function],
+              "encodeDates": [Function],
+              "escapeHTML": [Function],
+              "extend": [Function],
+              "formatDate": [Function],
+              "getHashParam": [Function],
+              "getQueryParam": [Function],
+              "identity": [Function],
+              "include": [Function],
+              "includes": [Function],
+              "info": Object {
+                "browser": [Function],
+                "browserVersion": [Function],
+                "campaignParams": [Function],
+                "device": [Function],
+                "os": [Function],
+                "pageviewInfo": [Function],
+                "people_properties": [Function],
+                "properties": [Function],
+                "referringDomain": [Function],
+                "searchEngine": [Function],
+                "searchInfo": [Function],
+              },
+              "inherit": [Function],
+              "isArguments": [Function],
+              "isArray": [Function],
+              "isBlockedUA": [Function],
+              "isDate": [Function],
+              "isElement": [Function],
+              "isEmptyObject": [Function],
+              "isFunction": [Function],
+              "isNumber": [Function],
+              "isObject": [Function],
+              "isString": [Function],
+              "isUndefined": [Function],
+              "keys": [Function],
+              "localStorage": Object {
+                "error": [Function],
+                "get": [Function],
+                "is_supported": [Function],
+                "parse": [Function],
+                "remove": [Function],
+                "set": [Function],
+              },
+              "register_event": [Function],
+              "safewrap": [Function],
+              "safewrap_class": [Function],
+              "safewrap_instance_methods": [Function],
+              "strip_empty_properties": [Function],
+              "timestamp": [Function],
+              "toArray": [Function],
+              "trim": [Function],
+              "truncate": [Function],
+              "utf8Encode": [Function],
+              "values": [Function],
+            },
+            "init": [Function],
+          }
+        }
+      >
+        <h1>
+          Dumb
+        </h1>
+      </DumbComponent>
+    </MixpanelConsumer>
+  </_class>
+</MixpanelProvider>
+`;
