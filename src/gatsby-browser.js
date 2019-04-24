@@ -27,7 +27,7 @@ function getOptions(pluginOptions) {
   const defaultsOptions = {
     apiToken: null,
     enableOnDevMode: true,
-    config: null,
+    mixpanelConfig: null,
   }
   const options = { ...defaultsOptions, ...pluginOptions }
   return { ...options, isEnable: isEnable(options) }
@@ -54,7 +54,7 @@ exports.onClientEntry = (skip, pluginOptions) => {
 
   mixpanel.init(
     options.apiToken,
-    Object.assign({ track_pageview: false }, options.config)
+    Object.assign({ track_pageview: false }, options.mixpanelConfig)
   )
 }
 

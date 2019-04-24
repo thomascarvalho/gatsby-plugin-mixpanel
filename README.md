@@ -60,7 +60,7 @@ Import the ```useMixpanel``` hook.
 ```javascript
 import { useMixpanel } from 'gatsby-plugin-mixpanel'
 
-const HelloWorld = () => {
+function HelloWorld() {
   const mixpanel = useMixpanel()
   mixpanel.track('Hello');
   return (
@@ -84,7 +84,7 @@ plugins: [
       apiToken: 'YOUR_MIXPANEL_API_TOKEN', // required
       // optional fields, default values
       enableOnDevMode: true, // if false mixpanel will be activated on NODE_ENV=production only
-      config: null // override specific config for mixpanel initialization https://github.com/mixpanel/mixpanel-js/blob/8b2e1f7b/src/mixpanel-core.js#L87-L110
+      mixpanelConfig: null // override specific config for mixpanel initialization https://github.com/mixpanel/mixpanel-js/blob/8b2e1f7b/src/mixpanel-core.js#L87-L110
       pageViews: null // see below
     },
   },
