@@ -2,15 +2,16 @@ import React from 'react'
 
 import { MixpanelProvider, mixpanel } from '.'
 
-const isEnable = options =>
-  (process.env.NODE_ENV === `production` || options.enableOnDevMode) &&
+function isEnable(options) {
+  return (process.env.NODE_ENV === `production` || options.enableOnDevMode) &&
   options.apiToken
+}
 
-const trackEvent = (eventName, properties) => {
+function trackEvent(eventName, properties) {
   if (eventName) mixpanel.track(eventName, properties)
 }
 
-const trackPageViews = (location, pageViews) => {
+function trackPageViews(location, pageViews) {
   if (pageViews && location) {
     let eventName
     if (pageViews instanceof Object) {
@@ -22,6 +23,16 @@ const trackPageViews = (location, pageViews) => {
   }
 }
 
+function getOptions(pluginOptions) {
+  const defaultsOptions = {
+    apiToken: null,
+    enableOnDevMode: true,
+    config: null,
+  }
+  const options = { ...defaultsOptions, ...pluginOptions }
+  return { ...options, isEnable: isEnable(options) }
+}
+
 exports.onRouteUpdate = ({ location }, pluginOptions) => {
   const options = getOptions(pluginOptions)
 
@@ -30,16 +41,6 @@ exports.onRouteUpdate = ({ location }, pluginOptions) => {
   }
 
   trackPageViews(location, options.pageViews)
-}
-
-const getOptions = pluginOptions => {
-  const defaultsOptions = {
-    apiToken: null,
-    enableOnDevMode: true,
-    config: null,
-  }
-  const options = { ...defaultsOptions, ...pluginOptions }
-  return { ...options, isEnable: isEnable(options) }
 }
 
 exports.onClientEntry = (skip, pluginOptions) => {
@@ -53,7 +54,7 @@ exports.onClientEntry = (skip, pluginOptions) => {
 
   mixpanel.init(
     options.apiToken,
-    Object.assign({}, { track_pageview: false }, options.config)
+    Object.assign({ track_pageview: false }, options.config)
   )
 }
 
