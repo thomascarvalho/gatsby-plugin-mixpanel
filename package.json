@@ -1,7 +1,7 @@
 {
   "name": "gatsby-plugin-mixpanel",
   "description": "Gatsby plugin to add mixpanel",
-  "version": "2.2.2",
+  "version": "3.0.1",
   "author": "Thomas Carvalho <carvalho.thomas@gmail.com>",
   "repository": {
     "type": "git",
@@ -15,30 +15,52 @@
   "keywords": [
     "gatsby",
     "gatsby-plugin",
-    "mixpanel"
+    "plugin",
+    "mixpanel",
+    "analytics"
   ],
   "license": "MIT",
   "main": "index.js",
   "devDependencies": {
-    "@babel/cli": "^7.1.2",
-    "@babel/core": "^7.1.2",
-    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/plugin-proposal-decorators": "^7.4.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.3",
     "@babel/plugin-transform-object-assign": "^7.0.0",
-    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-env": "^7.4.3",
     "@babel/preset-react": "^7.0.0",
+    "babel-jest": "^24.7.1",
     "cross-env": "^5.2.0",
-    "prettier": "^1.14.3"
-  },
-  "dependencies": {
-    "mixpanel-browser": "^2.22.4",
-    "react": "^16.7.0",
-    "react-mixpanel": "^0.0.11"
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.12.1",
+    "enzyme-to-json": "^3.3.5",
+    "jest": "^24.7.1",
+    "prettier": "^1.17.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   },
   "scripts": {
     "build": "babel src --out-dir . --ignore __tests__",
     "watch": "babel -w src --out-dir . --ignore __tests__",
     "prepublish": "cross-env NODE_ENV=production npm run build",
-    "format": "prettier --trailing-comma es5 --single-quote --write 'src/**/*.js'",
-    "deps": "yarn upgrade-interactive --latest"
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write '{src,__tests__}/**/*.js'",
+    "deps": "yarn upgrade-interactive --latest",
+    "test": "jest __tests__/"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "<rootDir>/setupTests.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  },
+  "dependencies": {
+    "mixpanel-browser": "^2.27.1"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.0.0",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
   }
 }
