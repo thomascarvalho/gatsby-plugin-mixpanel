@@ -15,7 +15,7 @@ function trackPageViews(location, pageViews, trackPageViewsAs) {
   if (pageViews && location) {
     let eventName
     if (pageViews instanceof Object) {
-      eventName = pageViews[location.pathname];
+      eventName = pageViews[location.pathname]
     } else if (trackPageViewsAs) {
       eventName = trackPageViewsAs;
     } else if (pageViews === 'all') {
