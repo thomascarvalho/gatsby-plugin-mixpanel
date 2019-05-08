@@ -42,7 +42,7 @@ exports.onRouteUpdate = ({ location }, pluginOptions) => {
     return
   }
 
-  trackPageViews(location, options.pageViews, options.trackPageViewsAs);
+  trackPageViews(location, options.pageViews, options.trackPageViewsAs)
 }
 
 exports.onClientEntry = (skip, pluginOptions) => {
