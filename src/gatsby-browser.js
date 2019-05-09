@@ -11,11 +11,13 @@ function trackEvent(eventName, properties) {
   if (eventName) mixpanel.track(eventName, properties)
 }
 
-function trackPageViews(location, pageViews) {
+function trackPageViews(location, pageViews, trackPageViewsAs) {
   if (pageViews && location) {
     let eventName
     if (pageViews instanceof Object) {
       eventName = pageViews[location.pathname]
+    } else if (trackPageViewsAs) {
+      eventName = trackPageViewsAs
     } else if (pageViews === 'all') {
       eventName = `View page ${location.pathname}`
     }
@@ -28,6 +30,7 @@ function getOptions(pluginOptions) {
     apiToken: null,
     enableOnDevMode: true,
     mixpanelConfig: null,
+    trackPageViewsAs: null,
   }
   const options = { ...defaultsOptions, ...pluginOptions }
   return { ...options, isEnable: isEnable(options) }
@@ -40,7 +43,7 @@ exports.onRouteUpdate = ({ location }, pluginOptions) => {
     return
   }
 
-  trackPageViews(location, options.pageViews)
+  trackPageViews(location, options.pageViews, options.trackPageViewsAs)
 }
 
 exports.onClientEntry = (skip, pluginOptions) => {
