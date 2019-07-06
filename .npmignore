@@ -38,3 +38,4 @@ examples
 .babelrc
 __tests__
 setupTests.js
+/.env
