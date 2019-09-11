@@ -22,19 +22,19 @@
   "license": "MIT",
   "main": "index.js",
   "devDependencies": {
-    "@babel/cli": "^7.5.5",
-    "@babel/core": "^7.5.5",
-    "@babel/plugin-proposal-decorators": "^7.4.4",
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/plugin-proposal-decorators": "^7.6.0",
     "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
     "@babel/plugin-transform-object-assign": "^7.0.0",
-    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-env": "^7.6.0",
     "@babel/preset-react": "^7.0.0",
-    "babel-jest": "^24.8.0",
-    "cross-env": "^5.2.0",
+    "babel-jest": "^24.9.0",
+    "cross-env": "^5.2.1",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "enzyme-to-json": "^3.4.0",
-    "jest": "^24.8.0",
+    "jest": "^24.9.0",
     "prettier": "^1.18.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
@@ -56,7 +56,7 @@
     ]
   },
   "dependencies": {
-    "mixpanel-browser": "^2.29.0"
+    "mixpanel-browser": "^2.29.1"
   },
   "peerDependencies": {
     "gatsby": "^2.0.0",
