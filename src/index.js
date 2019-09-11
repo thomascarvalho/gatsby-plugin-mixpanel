@@ -4,6 +4,7 @@ import React, {
   cloneElement,
   useContext,
 } from 'react'
+
 import mixpanel from 'mixpanel-browser'
 
 const MixpanelContext = createContext(mixpanel)

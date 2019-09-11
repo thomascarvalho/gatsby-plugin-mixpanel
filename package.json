@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-plugin-mixpanel",
+  "name": "@kindur/gatsby-plugin-mixpanel",
   "description": "Gatsby plugin to add mixpanel",
   "version": "3.0.5",
   "author": "Thomas Carvalho <carvalho.thomas@gmail.com>",
