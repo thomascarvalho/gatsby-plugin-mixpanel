@@ -21,16 +21,20 @@ export const MixpanelConsumer = ({ children }) => (
 )
 
 export const withMixpanel = () => WrappedComponent => {
-  return class extends PureComponent {
+  class WithMixpanel extends PureComponent {
     render() {
       return (
         <MixpanelConsumer>
-          <WrappedComponent {...this.props} />
+          <WrappedComponent ref={this.props.forwardedRef} {...this.props} />
         </MixpanelConsumer>
       )
     }
   }
-}
+
+  return React.forwardRef((props, ref) => {
+    return <WithMixpanel {...props} forwardedRef={ref} />;
+  });
+};
 
 export const useMixpanel = () => useContext(MixpanelContext)
 
