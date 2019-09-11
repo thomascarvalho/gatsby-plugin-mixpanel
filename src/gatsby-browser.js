@@ -1,5 +1,7 @@
 import React from 'react'
 
+const api_host = process.env.MIXPANEL_API_BASE || 'https://api.mixpanel.com';
+
 import { MixpanelProvider, mixpanel } from '.'
 
 function isEnable(options) {
@@ -50,14 +52,16 @@ exports.onClientEntry = (skip, pluginOptions) => {
   const options = getOptions(pluginOptions)
 
   if (!options.isEnable) {
-    mixpanel.init('disable', { autotrack: false })
+    mixpanel.init('disable', { autotrack: false, api_host })
     mixpanel.disable()
     return
   }
 
+  const customOptions = Object.assign({ track_pageview: false, api_host }, options.mixpanelConfig);
+
   mixpanel.init(
     options.apiToken,
-    Object.assign({ track_pageview: false }, options.mixpanelConfig)
+    customOptions
   )
 }
 
