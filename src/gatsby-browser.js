@@ -44,7 +44,7 @@ function getOptions(pluginOptions) {
     enableOnDevMode: true,
     mixpanelConfig: null,
     trackPageViewsAs: null,
-    getPageViewTransformerFn: 'return event',
+    getPageViewTransformerFn: 'return function(location) { return location; }',
   };
 
   const options = { ...defaultsOptions, ...pluginOptions };
@@ -62,7 +62,7 @@ exports.onRouteUpdate = ({ location }, pluginOptions) => {
     location,
     options.pageViews,
     options.trackPageViewsAs,
-    options.pageViewEventTransformer,
+    options.getPageViewTransformerFn,
   );
 };
 
