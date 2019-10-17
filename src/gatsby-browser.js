@@ -1,12 +1,14 @@
 import React from 'react'
 
-const api_host = process.env.MIXPANEL_API_BASE || 'https://api.mixpanel.com';
+const api_host = process.env.MIXPANEL_API_BASE || 'https://api.mixpanel.com'
 
 import { MixpanelProvider, mixpanel } from '.'
 
 function isEnable(options) {
-  return (process.env.NODE_ENV === `production` || options.enableOnDevMode) &&
-  options.apiToken
+  return (
+    (process.env.NODE_ENV === `production` || options.enableOnDevMode) &&
+    options.apiToken
+  )
 }
 
 function trackEvent(eventName, properties) {
@@ -17,24 +19,24 @@ function trackPageViews(
   location,
   pageViews,
   trackPageViewsAs,
-  getPageViewTransformerFn,
+  getPageViewTransformerFn
 ) {
   if (pageViews && location) {
-    let eventName;
+    let eventName
     if (pageViews instanceof Object) {
-      eventName = pageViews[location.pathname];
+      eventName = pageViews[location.pathname]
     } else if (trackPageViewsAs) {
-      eventName = trackPageViewsAs;
+      eventName = trackPageViewsAs
     } else if (pageViews === 'all') {
-      eventName = `View page ${location.pathname}`;
+      eventName = `View page ${location.pathname}`
     }
 
     const pageViewEventTransformerFn = new Function(
       'location',
-      getPageViewTransformerFn,
-    );
-    const event = pageViewEventTransformerFn()(location);
-    trackEvent(eventName, event);
+      getPageViewTransformerFn
+    )
+    const event = pageViewEventTransformerFn()(location)
+    trackEvent(eventName, event)
   }
 }
 
@@ -45,10 +47,10 @@ function getOptions(pluginOptions) {
     mixpanelConfig: null,
     trackPageViewsAs: null,
     getPageViewTransformerFn: 'return function(location) { return location; }',
-  };
+  }
 
-  const options = { ...defaultsOptions, ...pluginOptions };
-  return { ...options, isEnable: isEnable(options) };
+  const options = { ...defaultsOptions, ...pluginOptions }
+  return { ...options, isEnable: isEnable(options) }
 }
 
 exports.onRouteUpdate = ({ location }, pluginOptions) => {
@@ -62,9 +64,9 @@ exports.onRouteUpdate = ({ location }, pluginOptions) => {
     location,
     options.pageViews,
     options.trackPageViewsAs,
-    options.getPageViewTransformerFn,
-  );
-};
+    options.getPageViewTransformerFn
+  )
+}
 
 exports.onClientEntry = (skip, pluginOptions) => {
   const options = getOptions(pluginOptions)
@@ -75,12 +77,12 @@ exports.onClientEntry = (skip, pluginOptions) => {
     return
   }
 
-  const customOptions = Object.assign({ track_pageview: false, api_host }, options.mixpanelConfig);
-
-  mixpanel.init(
-    options.apiToken,
-    customOptions
+  const customOptions = Object.assign(
+    { track_pageview: false, api_host },
+    options.mixpanelConfig
   )
+
+  mixpanel.init(options.apiToken, customOptions)
 }
 
 exports.wrapRootElement = ({ element }) => (

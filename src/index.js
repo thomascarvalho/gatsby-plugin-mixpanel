@@ -33,9 +33,9 @@ export const withMixpanel = () => WrappedComponent => {
   }
 
   return React.forwardRef((props, ref) => {
-    return <WithMixpanel {...props} forwardedRef={ref} />;
-  });
-};
+    return <WithMixpanel {...props} forwardedRef={ref} />
+  })
+}
 
 export const useMixpanel = () => useContext(MixpanelContext)
 
