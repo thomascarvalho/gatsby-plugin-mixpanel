@@ -13,17 +13,28 @@ function trackEvent(eventName, properties) {
   if (eventName) mixpanel.track(eventName, properties)
 }
 
-function trackPageViews(location, pageViews, trackPageViewsAs) {
+function trackPageViews(
+  location,
+  pageViews,
+  trackPageViewsAs,
+  getPageViewTransformerFn,
+) {
   if (pageViews && location) {
-    let eventName
+    let eventName;
     if (pageViews instanceof Object) {
-      eventName = pageViews[location.pathname]
+      eventName = pageViews[location.pathname];
     } else if (trackPageViewsAs) {
-      eventName = trackPageViewsAs
+      eventName = trackPageViewsAs;
     } else if (pageViews === 'all') {
-      eventName = `View page ${location.pathname}`
+      eventName = `View page ${location.pathname}`;
     }
-    trackEvent(eventName, location)
+
+    const pageViewEventTransformerFn = new Function(
+      'location',
+      getPageViewTransformerFn,
+    );
+    const event = pageViewEventTransformerFn()(location);
+    trackEvent(eventName, event);
   }
 }
 
@@ -33,9 +44,11 @@ function getOptions(pluginOptions) {
     enableOnDevMode: true,
     mixpanelConfig: null,
     trackPageViewsAs: null,
-  }
-  const options = { ...defaultsOptions, ...pluginOptions }
-  return { ...options, isEnable: isEnable(options) }
+    getPageViewTransformerFn: 'return function(location) { return location; }',
+  };
+
+  const options = { ...defaultsOptions, ...pluginOptions };
+  return { ...options, isEnable: isEnable(options) };
 }
 
 exports.onRouteUpdate = ({ location }, pluginOptions) => {
@@ -45,8 +58,13 @@ exports.onRouteUpdate = ({ location }, pluginOptions) => {
     return
   }
 
-  trackPageViews(location, options.pageViews, options.trackPageViewsAs)
-}
+  trackPageViews(
+    location,
+    options.pageViews,
+    options.trackPageViewsAs,
+    options.getPageViewTransformerFn,
+  );
+};
 
 exports.onClientEntry = (skip, pluginOptions) => {
   const options = getOptions(pluginOptions)
