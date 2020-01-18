@@ -22,19 +22,19 @@
   "license": "MIT",
   "main": "index.js",
   "devDependencies": {
-    "@babel/cli": "^7.7.5",
-    "@babel/core": "^7.7.5",
-    "@babel/plugin-proposal-decorators": "^7.7.4",
-    "@babel/plugin-proposal-object-rest-spread": "^7.7.4",
-    "@babel/plugin-transform-object-assign": "^7.7.4",
-    "@babel/preset-env": "^7.7.6",
-    "@babel/preset-react": "^7.7.4",
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.8.3",
+    "@babel/plugin-proposal-decorators": "^7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
+    "@babel/plugin-transform-object-assign": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-react": "^7.8.3",
     "babel-jest": "^24.9.0",
     "cross-env": "^6.0.3",
-    "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.15.1",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
     "enzyme-to-json": "^3.4.3",
-    "git-cz": "^3.3.0",
+    "git-cz": "^4.0.0",
     "jest": "^24.9.0",
     "prettier": "^1.19.1",
     "react": "^16.12.0",
@@ -58,7 +58,7 @@
     ]
   },
   "dependencies": {
-    "mixpanel-browser": "^2.31.0"
+    "mixpanel-browser": "^2.33.1"
   },
   "peerDependencies": {
     "gatsby": "^2.0.0",
