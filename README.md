@@ -1,5 +1,7 @@
 [![npm package](https://img.shields.io/npm/v/gatsby-plugin-mixpanel.svg?style=flat-square)](https://www.npmjs.org/package/gatsby-plugin-mixpanel)
 [![Build Status](https://travis-ci.org/thomascarvalho/gatsby-plugin-mixpanel.svg?branch=master)](https://travis-ci.org/thomascarvalho/gatsby-plugin-mixpanel)
+[![codecov](https://codecov.io/gh/thomascarvalho/gatsby-plugin-mixpanel/branch/master/graph/badge.svg)](https://codecov.io/gh/thomascarvalho/gatsby-plugin-mixpanel)
+
 # gatsby-plugin-mixpanel
 
 For Gatsby v2
