@@ -4,3 +4,10 @@ node_js:
   - 10.15.3
 
 cache: yarn
+
+install:
+  - yarn global add codecov
+
+script:
+  - yarn test --coverage
+  - codecov
