@@ -46,7 +46,7 @@
     "prepublish": "cross-env NODE_ENV=production npm run build",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write '{src,__tests__}/**/*.js'",
     "deps": "yarn upgrade-interactive --latest",
-    "test": "jest __tests__/",
+    "test": "./node_modules/.bin/jest __tests__/",
     "cz": "git-cz"
   },
   "jest": {
