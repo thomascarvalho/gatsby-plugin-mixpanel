@@ -4,11 +4,12 @@ node_js:
   - 12.16.0
 
 cache:
-  npm: false
+  yarn: false
 
 install:
-  - npm install -g codecov
+  - yarn global add codecov
 
 script:
-  - npm test
+  - yarn install
+  - yarn test --coverage
   - codecov

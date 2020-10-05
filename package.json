@@ -50,7 +50,6 @@
     "cz": "git-cz"
   },
   "jest": {
-    "verbose": true,
     "setupFilesAfterEnv": [
       "<rootDir>/setupTests.js"
     ],
