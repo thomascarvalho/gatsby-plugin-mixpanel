@@ -18,7 +18,7 @@ class DumbComponentWithDecoratorMixpanel extends PureComponent {
   }
 }
 
-const wrapMixpanelProvider = component => {
+const wrapMixpanelProvider = (component) => {
   return <MixpanelProvider>{component}</MixpanelProvider>
 }
 
@@ -61,7 +61,7 @@ describe('Mixpanel Consumer', () => {
       return null
     }
 
-    const testHook = callback => {
+    const testHook = (callback) => {
       mount(<TestHook callback={callback} />)
     }
 
