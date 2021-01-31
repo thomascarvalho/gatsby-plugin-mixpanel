@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.4.0](https://www.github.com/thomascarvalho/gatsby-plugin-mixpanel/compare/v3.3.0...v3.4.0) (2021-01-31)
+
+
+### Features
+
+* using mixlanel-browser v2.41.0 ([6d4134c](https://www.github.com/thomascarvalho/gatsby-plugin-mixpanel/commit/6d4134cf9b2affe8bf0bc4e45f63e073417e4402))
+
 ## [3.3.0](https://www.github.com/thomascarvalho/gatsby-plugin-mixpanel/compare/v3.2.1...v3.3.0) (2020-12-31)
 
 
