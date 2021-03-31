@@ -27,9 +27,7 @@ exports[`Mixpanel Consumer Consumer component 1`] = `
             "escapeHTML": [Function],
             "extend": [Function],
             "formatDate": [Function],
-            "getHashParam": [Function],
             "getQueryParam": [Function],
-            "identity": [Function],
             "include": [Function],
             "includes": [Function],
             "info": Object {
@@ -123,9 +121,7 @@ exports[`Mixpanel Consumer withMixpanel decorator function 1`] = `
                 "escapeHTML": [Function],
                 "extend": [Function],
                 "formatDate": [Function],
-                "getHashParam": [Function],
                 "getQueryParam": [Function],
-                "identity": [Function],
                 "include": [Function],
                 "includes": [Function],
                 "info": Object {
@@ -221,9 +217,7 @@ exports[`Mixpanel Consumer withMixpanel wrapped function 1`] = `
                 "escapeHTML": [Function],
                 "extend": [Function],
                 "formatDate": [Function],
-                "getHashParam": [Function],
                 "getQueryParam": [Function],
-                "identity": [Function],
                 "include": [Function],
                 "includes": [Function],
                 "info": Object {
