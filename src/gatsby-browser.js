@@ -46,7 +46,7 @@ function getOptions(pluginOptions) {
     enableOnDevMode: true,
     mixpanelConfig: null,
     trackPageViewsAs: null,
-    getPageViewTransformerFn: 'return function(location) { return location; }',
+    getPageViewTransformerFn: 'return function(location) { return location; }'
   }
 
   const options = { ...defaultsOptions, ...pluginOptions }

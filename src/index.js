@@ -2,7 +2,7 @@ import React, {
   PureComponent,
   createContext,
   cloneElement,
-  useContext,
+  useContext
 } from 'react'
 
 import mixpanel from 'mixpanel-browser'
@@ -17,11 +17,11 @@ export const MixpanelProvider = ({ children }) => (
 
 export const MixpanelConsumer = ({ children }) => (
   <MixpanelContext.Consumer>
-    {(mixpanel) => cloneElement(children, { mixpanel })}
+    {mixpanel => cloneElement(children, { mixpanel })}
   </MixpanelContext.Consumer>
 )
 
-export const withMixpanel = () => (WrappedComponent) => {
+export const withMixpanel = () => WrappedComponent => {
   class WithMixpanel extends PureComponent {
     render() {
       return (
