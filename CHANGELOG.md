@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.6.0](https://www.github.com/thomascarvalho/gatsby-plugin-mixpanel/compare/v3.5.0...v3.6.0) (2022-05-11)
+
+
+### Features
+
+* support gatsby v4 ([ccda9c0](https://www.github.com/thomascarvalho/gatsby-plugin-mixpanel/commit/ccda9c0316d34c265728abc79c0f592b96398e53))
+
 ## [3.5.0](https://www.github.com/thomascarvalho/gatsby-plugin-mixpanel/compare/v3.4.0...v3.5.0) (2021-03-31)
 
 
