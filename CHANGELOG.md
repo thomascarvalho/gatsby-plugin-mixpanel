@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.7.0](https://www.github.com/thomascarvalho/gatsby-plugin-mixpanel/compare/v3.6.0...v3.7.0) (2022-07-26)
+
+
+### Features
+
+* add react 18 to peerDependencies ([c6efb8a](https://www.github.com/thomascarvalho/gatsby-plugin-mixpanel/commit/c6efb8a19f7f4c9a8d0315489ebb0877b419c94c))
+
 ## [3.6.0](https://www.github.com/thomascarvalho/gatsby-plugin-mixpanel/compare/v3.5.0...v3.6.0) (2022-05-11)
 
 
