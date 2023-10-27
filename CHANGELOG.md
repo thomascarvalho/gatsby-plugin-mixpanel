@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.1.0](https://www.github.com/thomascarvalho/gatsby-plugin-mixpanel/compare/v4.0.0...v4.1.0) (2023-10-27)
+
+
+### Features
+
+* publish release ([9483651](https://www.github.com/thomascarvalho/gatsby-plugin-mixpanel/commit/94836510093fc76852f5db1ceebac4d857efbe80))
+
 ## [4.0.0](https://www.github.com/thomascarvalho/gatsby-plugin-mixpanel/compare/v3.7.0...v4.0.0) (2023-10-27)
 
 
