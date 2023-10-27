@@ -1,5 +1,16 @@
 # Changelog
 
+## [4.0.0](https://www.github.com/thomascarvalho/gatsby-plugin-mixpanel/compare/v3.7.0...v4.0.0) (2023-10-27)
+
+
+### ⚠ BREAKING CHANGES
+
+* using gatsby v5 (#50)
+
+### Features
+
+* using gatsby v5 ([#50](https://www.github.com/thomascarvalho/gatsby-plugin-mixpanel/issues/50)) ([952caa2](https://www.github.com/thomascarvalho/gatsby-plugin-mixpanel/commit/952caa2211c0501a2d7c7064bcd609a330888f82))
+
 ## [3.7.0](https://www.github.com/thomascarvalho/gatsby-plugin-mixpanel/compare/v3.6.0...v3.7.0) (2022-07-26)
 
 
