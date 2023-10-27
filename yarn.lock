@@ -163,12 +163,12 @@
     lodash.debounce "^4.0.8"
     resolve "^1.14.2"
 
-"@babel/helper-environment-visitor@^7.18.9", "@babel/helper-environment-visitor@^7.22.20", "@babel/helper-environment-visitor@^7.22.5":
+"@babel/helper-environment-visitor@^7.22.20", "@babel/helper-environment-visitor@^7.22.5":
   version "7.22.20"
   resolved "https://registry.yarnpkg.com/@babel/helper-environment-visitor/-/helper-environment-visitor-7.22.20.tgz#96159db61d34a29dba454c959f5ae4a649ba9167"
   integrity sha512-zfedSIzFhat/gFhWfHtgWvlec0nqB9YEIVrpuwjruLlXfUSnA8cJB0miHKwqDnQ7d32aKo2xt88/xZptwxbfhA==
 
-"@babel/helper-function-name@^7.18.9", "@babel/helper-function-name@^7.22.5", "@babel/helper-function-name@^7.23.0":
+"@babel/helper-function-name@^7.22.5", "@babel/helper-function-name@^7.23.0":
   version "7.23.0"
   resolved "https://registry.yarnpkg.com/@babel/helper-function-name/-/helper-function-name-7.23.0.tgz#1f9a3cdbd5b2698a670c30d2735f9af95ed52759"
   integrity sha512-OErEqsrxjZTJciZ4Oo+eoZqeW9UIiOcuYKRJA4ZAgV9myA+pOXhhmpfNCKjEH/auVfEYVFJ6y1Tc4r0eIApqiw==
@@ -176,7 +176,7 @@
     "@babel/template" "^7.22.15"
     "@babel/types" "^7.23.0"
 
-"@babel/helper-hoist-variables@^7.18.6", "@babel/helper-hoist-variables@^7.22.5":
+"@babel/helper-hoist-variables@^7.22.5":
   version "7.22.5"
   resolved "https://registry.yarnpkg.com/@babel/helper-hoist-variables/-/helper-hoist-variables-7.22.5.tgz#c01a007dac05c085914e8fb652b339db50d823bb"
   integrity sha512-wGjk9QZVzvknA6yKIUURb8zY3grXCcOZt+/7Wcy8O2uctxhplmUPkOdlgoNhmdVee2c92JXbf1xpMtVNbfoxRw==
@@ -252,7 +252,7 @@
   dependencies:
     "@babel/types" "^7.22.5"
 
-"@babel/helper-split-export-declaration@^7.18.6", "@babel/helper-split-export-declaration@^7.22.6":
+"@babel/helper-split-export-declaration@^7.22.6":
   version "7.22.6"
   resolved "https://registry.yarnpkg.com/@babel/helper-split-export-declaration/-/helper-split-export-declaration-7.22.6.tgz#322c61b7310c0997fe4c323955667f18fcefb91c"
   integrity sha512-AsUnxuLhRYsisFiaJwvp1QF+I3KjD5FOxut14q/GzovUe6orHLesW2C7d754kRm53h5gqrz6sFl6sxc4BVtE/g==
@@ -1100,23 +1100,7 @@
     "@babel/parser" "^7.10.4"
     "@babel/types" "^7.10.4"
 
-"@babel/traverse@^7.1.0":
-  version "7.18.9"
-  resolved "https://registry.yarnpkg.com/@babel/traverse/-/traverse-7.18.9.tgz#deeff3e8f1bad9786874cb2feda7a2d77a904f98"
-  integrity sha512-LcPAnujXGwBgv3/WHv01pHtb2tihcyW1XuL9wd7jqh1Z8AQkTd+QVjMrMijrln0T7ED3UXLIy36P9Ao7W75rYg==
-  dependencies:
-    "@babel/code-frame" "^7.18.6"
-    "@babel/generator" "^7.18.9"
-    "@babel/helper-environment-visitor" "^7.18.9"
-    "@babel/helper-function-name" "^7.18.9"
-    "@babel/helper-hoist-variables" "^7.18.6"
-    "@babel/helper-split-export-declaration" "^7.18.6"
-    "@babel/parser" "^7.18.9"
-    "@babel/types" "^7.18.9"
-    debug "^4.1.0"
-    globals "^11.1.0"
-
-"@babel/traverse@^7.18.9", "@babel/traverse@^7.23.2":
+"@babel/traverse@^7.1.0", "@babel/traverse@^7.18.9", "@babel/traverse@^7.23.2":
   version "7.23.2"
   resolved "https://registry.yarnpkg.com/@babel/traverse/-/traverse-7.23.2.tgz#329c7a06735e144a506bdb2cad0268b7f46f4ad8"
   integrity sha512-azpe59SQ48qG6nu2CzcMLbxUudtN+dOM9kDbUqGq3HXUJRlo7i8fvPoxQUzYgLZ4cMVmuZgm8vvBpNeRhd6XSw==
