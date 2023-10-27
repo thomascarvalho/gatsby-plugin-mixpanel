@@ -4,7 +4,9 @@
 
 # gatsby-plugin-mixpanel
 
-For Gatsby v2 & v3 & v4
+For Gatsby v5
+
+(see previous releases for Gatsby v2, v3 & v4)
 
 Integrate [mixpanel](https://www.mixpanel.com) on your [gatsby](https://github.com/gatsbyjs/gatsby) project
 
